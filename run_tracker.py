@@ -10,8 +10,8 @@ import time
 from region_to_bbox import region_to_bbox
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--data_dir', type=str, default='/home/wangkh/tracker_benchmark/data')
-parser.add_argument('--model_dir', type=str, default='/home/wangkh/ex/models/siamfc.pth')
+parser.add_argument('--data_dir', type=str, default='/home/username/tracker_benchmark/data')
+parser.add_argument('--model_dir', type=str, default='/home/username/siamfc-pytorch/models/siamfc.pth')
 arg = parser.parse_args()
 data_dir = arg.data_dir
 model_dir = arg.model_dir
