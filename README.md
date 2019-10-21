@@ -29,7 +29,7 @@ python train.py --train_data_dir path/to/data/GOT-10K/crop_train_data  \
 | ---------------------------------------------  | -------|
 | SiamFC-color(converted from matconvnet)        | 0.5544 |
 | SiamFC-color+gray(converted from matconvnet)   | 0.5818 |
-| SiamFC(trained from scratch)      		 | 0.6230 |
+| SiamFC(trained from scratch)      		 | **0.6230 |
 
 ## Reference
 [1] Bertinetto, Luca and Valmadre, Jack and Henriques, Joo F and Vedaldi, Andrea and Torr, Philip H S
