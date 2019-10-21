@@ -8,8 +8,8 @@ from concurrent import futures
 from config import config
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--data_dir',type=str, default='/home/wangkh/Downloads/got-10k/full_data/val', help='got_10k data dir')
-parser.add_argument('--output_dir',type=str, default='/home/wangkh/Downloads/got-10k/crop_val_data', help='got_10k output dir')
+parser.add_argument('--data_dir',type=str, default='/home/username/Downloads/got-10k/full_data/val', help='got_10k data dir')
+parser.add_argument('--output_dir',type=str, default='/home/username/Downloads/got-10k/crop_data', help='got_10k output dir')
 parser.add_argument('--num_processings',type=int, default=None)
 arg = parser.parse_args()
 datapath = arg.data_dir
