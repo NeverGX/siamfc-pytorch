@@ -2,8 +2,8 @@
 ## Introduction
 This project is the Pytorch implementation of Fully-Convolutional Siamese Networks for Object Tracking, the original version was trainned on ILSVRC2015-VID dataset, but this version is trained on GOT-10K dataset, and achieved better results.
 ## Download models
-Download models in [BaiduYun](https://pan.baidu.com/s/1pBZob53r8On-eJBKfY-qKQ&shfl=sharepset) and put the model.pth in the correct directory in experiments
-The extracted code is ```bash duuy
+Download models in [BaiduYun](https://pan.baidu.com/s/1pBZob53r8On-eJBKfY-qKQ&shfl=sharepset) and put the model.pth in the correct directory in experiments.
+The extracted code is ```bash duuy```
 ## Run demo
 ```bash
 cd SiamFC-Pytorch
