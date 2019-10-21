@@ -1,8 +1,8 @@
 # Pytorch implementation of SiamFC
 ## Introduction
-This project is the Pytorch implementation of Fully-Convolutional Siamese Networks for Object Tracking，the original version was trainned on ILSVRC2015-VID dataset, but this version is trained on GOT-10K dataset, and achieved better results.
+This project is the Pytorch implementation of Fully-Convolutional Siamese Networks for Object Tracking, the original version was trainned on ILSVRC2015-VID dataset, but this version is trained on GOT-10K dataset, and achieved better results.
 ## Download models
-Download models in BaiduYun(https://pan.baidu.com/s/1pBZob53r8On-eJBKfY-qKQ&shfl=sharepset) and put the model.pth in the correct directory in experiments
+Download models in [BaiduYun](https://pan.baidu.com/s/1pBZob53r8On-eJBKfY-qKQ&shfl=sharepset) and put the model.pth in the correct directory in experiments
 The extracted code is ```duuy
 ## Run demo
 ```bash
@@ -46,14 +46,14 @@ python bin/train_siamfc.py --gpu-id [gpu_id] --data-dir path/to/data/ILSVRC2015_
 ## Benchmark results
 #### OTB100
 
-| Tracker 			    		                         |  AUC   |
+| Tracker 			    		 |  AUC   |
 | ---------------------------------------------  | -------|
 | SiamFC-color(converted from matconvnet)        | 0.5544 |
 | SiamFC-color+gray(converted from matconvnet)   | 0.5818 |
-| SiamFC(trained from scratch)      		         | 0.6230 |
+| SiamFC(trained from scratch)      		 | 0.6230 |
 
 ## Reference
 [1] Bertinetto, Luca and Valmadre, Jack and Henriques, Joo F and Vedaldi, Andrea and Torr, Philip H S
 		Fully-Convolutional Siamese Networks for Object Tracking
 		In ECCV 2016 workshops
-[2] StrangerZhang/SiamFC-PyTorch(https://github.com/StrangerZhang/SiamFC-PyTorch)
+[2] [StrangerZhang/SiamFC-PyTorch](https://github.com/StrangerZhang/SiamFC-PyTorch)
