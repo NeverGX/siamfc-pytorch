@@ -3,45 +3,24 @@
 This project is the Pytorch implementation of Fully-Convolutional Siamese Networks for Object Tracking, the original version was trainned on ILSVRC2015-VID dataset, but this version is trained on GOT-10K dataset, and achieved better results.
 ## Download models
 Download models in [BaiduYun](https://pan.baidu.com/s/1pBZob53r8On-eJBKfY-qKQ&shfl=sharepset) and put the model.pth in the correct directory in experiments.
-The extracted code is ```bash duuy```
-## Run demo
+The extracted code is ```duuy```
+## Run tracker
 ```bash
-cd SiamFC-Pytorch
-
-mkdir models
-
-# for color model
-wget http://www.robots.ox.ac.uk/%7Eluca/stuff/siam-fc_nets/2016-08-17.net.mat -P models/
-# for color+gray model
-wget http://www.robots.ox.ac.uk/%7Eluca/stuff/siam-fc_nets/2016-08-17_gray025.net.mat -P models/
-
-python bin/convert_pretrained_model.py
-
-# video dir should conatin groundtruth_rect.txt which the same format like otb
-python bin/demo_siamfc --gpu-id [gpu_id] --video-dir path/to/video
+cd siamfc-pytorch
+python run_tracker.py --data_dir path/to/data --model_dir path/to/model
 ```
-
 ## Training
-Download ILSVRC2015-VID 
+Download GOT-10K
 
 ```bash
-cd SiamFC-Pytorch
-
-mkdir models
-
-# using 12 threads should take an hour
-python bin/create_dataset.py --data-dir path/to/data/ILSVRC2015 \
-			     --output-dir path/to/data/ILSVRC_VID_CURATION \
-			     --num-threads 8
-
-# ILSVRC2015_VID_CURATION and ILSVRC2015_VID_CURATION.lmdb should be in the same directory
-# the ILSVRC2015_VID_CURATION.lmdb should be about 34G or so
-python bin/create_lmdb.py --data-dir path/to/data/ILSVRC_VID_CURATION \
-			  --output-dir path/to/data/ILSVRC2015_VID_CURATION.lmdb \
-		          --num-threads 8
-
-# training should take about 1.5~2hrs on a Titan Xp GPU with 30 epochs
-python bin/train_siamfc.py --gpu-id [gpu_id] --data-dir path/to/data/ILSVRC2015_VID_CURATION
+cd siamfc-pytorch
+# data preprocessing
+python data_preprocessing.py --data-dir path/to/data/GOT-10K \
+			     --output-dir path/to/data/GOT-10K/crop_data \
+			     --num_processings 8
+# training 
+python train.py --train_data_dir path/to/data/GOT-10K/crop_train_data  \
+			     ----val_data_dir path/to/data/GOT-10K/crop_val_data 
 ```
 ## Benchmark results
 #### OTB100
