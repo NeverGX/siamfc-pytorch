@@ -20,7 +20,7 @@ python data_preprocessing.py --data-dir path/to/data/GOT-10K \
 			     --num_processings 8
 # training 
 python train.py --train_data_dir path/to/data/GOT-10K/crop_train_data  \
-			     ----val_data_dir path/to/data/GOT-10K/crop_val_data 
+			     --val_data_dir path/to/data/GOT-10K/crop_val_data 
 ```
 ## Benchmark results
 #### OTB100
