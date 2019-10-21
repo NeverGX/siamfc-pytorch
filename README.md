@@ -35,4 +35,5 @@ python train.py --train_data_dir path/to/data/GOT-10K/crop_train_data  \
 [1] Bertinetto, Luca and Valmadre, Jack and Henriques, Joo F and Vedaldi, Andrea and Torr, Philip H S
 		Fully-Convolutional Siamese Networks for Object Tracking
 		In ECCV 2016 workshops
+		
 [2] [StrangerZhang/SiamFC-PyTorch](https://github.com/StrangerZhang/SiamFC-PyTorch)
