@@ -22,8 +22,8 @@ import sys
 torch.manual_seed(1234)
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--train_data_dir',type=str, default='/home/wangkh/Downloads/got-10k/crop_train_data', help='got_10k train dir')
-parser.add_argument('--val_data_dir',type=str, default='/home/wangkh/Downloads/got-10k/crop_val_data', help='got_10k val dir')
+parser.add_argument('--train_data_dir',type=str, default='/home/username/Downloads/got-10k/crop_train_data', help='got_10k train dir')
+parser.add_argument('--val_data_dir',type=str, default='/home/username/Downloads/got-10k/crop_val_data', help='got_10k val dir')
 arg = parser.parse_args()
 train_data_dir = arg.train_data_dir
 val_data_dir = arg.val_data_dir
