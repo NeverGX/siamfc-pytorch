@@ -1,6 +1,6 @@
 # Pytorch implementation of SiamFC
 ## Introduction
-This project is the Pytorch implementation of [**Fully-Convolutional Siamese Networks for Object Tracking**](http://www.robots.ox.ac.uk/~luca/siamese-fc.html), the original version was trainned on **ILSVRC2015-VID** dataset, but this version was trained on [**GOT-10K**](http://got-10k.aitestunion.com/) dataset, and achieved better results.
+This project is the Pytorch implementation of [**Fully-Convolutional Siamese Networks for Object Tracking**](http://www.robots.ox.ac.uk/~luca/siamese-fc.html), the original version was trained on **ILSVRC2015-VID** dataset, but this version was trained on [**GOT-10K**](http://got-10k.aitestunion.com/) dataset, and achieved better results.
 ## Download models
 Download models in [BaiduYun](https://pan.baidu.com/s/1pBZob53r8On-eJBKfY-qKQ&shfl=sharepset) and put the model.pth in the correct directory in experiments.
 The extracted code is ```duuy```
