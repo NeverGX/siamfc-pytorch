@@ -88,7 +88,7 @@ def main():
                 optimizer.step()
                 step = epoch * len(trainloader) + i
                 summary_writer.add_scalar('train/loss', loss.data, step)
-                train_loss.append(loss.data)
+                train_loss.append(loss.data.cpu().numpy())
             train_loss = np.mean(train_loss)
             valid_loss = []
             model.eval()
@@ -97,7 +97,7 @@ def main():
                 z, x = Variable(z.cuda()), Variable(x.cuda())
                 outputs = model(z, x)
                 loss = model.loss(outputs)
-                valid_loss.append(loss.data)
+                valid_loss.append(loss.data.cpu().numpy())
             valid_loss = np.mean(valid_loss)
             print("EPOCH %d valid_loss: %.4f, train_loss: %.4f, learning_rate: %.4f" %
                   (epoch, valid_loss, train_loss, optimizer.param_groups[0]["lr"]))
