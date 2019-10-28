@@ -34,10 +34,10 @@ class GOT_10KDataset(Dataset):
         x = cv2.imread(x_path, cv2.IMREAD_COLOR)
         x = cv2.cvtColor(x, cv2.COLOR_BGR2RGB)
         if np.random.rand(1) < config.gray_ratio: # data augmentation for gray image to color image
-            exemplar_img = cv2.cvtColor(exemplar_img, cv2.COLOR_RGB2GRAY)
-            exemplar_img = cv2.cvtColor(exemplar_img, cv2.COLOR_GRAY2RGB)
-            instance_img = cv2.cvtColor(instance_img, cv2.COLOR_RGB2GRAY)
-            instance_img = cv2.cvtColor(instance_img, cv2.COLOR_GRAY2RGB)
+            z = cv2.cvtColor(z, cv2.COLOR_RGB2GRAY)
+            z = cv2.cvtColor(z, cv2.COLOR_GRAY2RGB)
+            x = cv2.cvtColor(x, cv2.COLOR_RGB2GRAY)
+            x = cv2.cvtColor(x, cv2.COLOR_GRAY2RGB)
         z = self.z_transforms(z)
         x = self.x_transforms(x)
         return z, x
