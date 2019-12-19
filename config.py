@@ -32,7 +32,7 @@ class Config:
     scale_lr = 0.59                        # scale learning rate
     response_up_stride = 16                # response upsample stride
     response_sz = 17                       # response size
-    window_influence = 0.176               # window influence
+    window_influence = 0.25                # window influence
     scale_penalty = 0.9745                 # scale penalty
     total_stride = 8                       # total stride of backbone
     sample_type = 'uniform'
